@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from './Header';
+import Header from '../../Components/Header/Header';
 import 'materialize-css/dist/css/materialize.min.css';
 
-function App() {
+function Home() {
   return (
-    <div className="App">
+    <div className="Home">
       <Header/ >
     </div>
   );
 }
 
-export default App;
+export default Home;
