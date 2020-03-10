@@ -5,6 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Sobre from './Pages/Sobre/Sobre'
+import NotFound from './Pages/NotFound/NotFound';
 
 ReactDOM.render(
     <BrowserRouter>
