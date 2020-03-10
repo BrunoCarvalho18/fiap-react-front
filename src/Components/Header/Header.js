@@ -6,7 +6,7 @@ const Header = () =>{
     <nav>
     <div className="nav-wrapper indigo lighten-2">
     <LinkWrapper to="/" className="brand-logo">Parceiros</LinkWrapper>
-      <ul class="right hide-on-med-and-down">
+     <ul className="right">
         <li><LinkWrapper  to='/cadastro'>Cadastro</LinkWrapper></li>
         <li><LinkWrapper  to='/parceiros'>Parceiros</LinkWrapper></li>
         <li><LinkWrapper  to='/sobre'>Sobre</LinkWrapper></li>
