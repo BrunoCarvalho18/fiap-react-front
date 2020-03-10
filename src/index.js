@@ -11,6 +11,7 @@ ReactDOM.render(
     <BrowserRouter>
         <Switch>
             <Route path='/' exact={true} component={Home}/>
+            <Route path='/index' component={Home}/>
             <Route path='/sobre' component={Sobre}/>
             <Route component={NotFound}/>
         </Switch>
