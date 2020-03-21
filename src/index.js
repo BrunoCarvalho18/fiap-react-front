@@ -4,8 +4,11 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from './Pages/Home/Home';
-import Sobre from './Pages/Sobre/Sobre'
+import Sobre from './Pages/Sobre/Sobre';
+import Cadastro from './Pages/Cadastro/Cadastro';
 import NotFound from './Pages/NotFound/NotFound';
+import Parceiro from './Pages/Parceiro/Parceiro';
+
 
 ReactDOM.render(
     <BrowserRouter>
@@ -13,6 +16,8 @@ ReactDOM.render(
             <Route path='/' exact={true} component={Home}/>
             <Route path='/index' component={Home}/>
             <Route path='/sobre' component={Sobre}/>
+            <Route path='/cadastro' component={Cadastro}/>
+            <Route path='/parceiros' component={Parceiro}/>
             <Route component={NotFound}/>
         </Switch>
     </BrowserRouter>,
