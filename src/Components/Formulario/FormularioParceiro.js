@@ -95,7 +95,7 @@ class FormularioParceiro extends Component {
             <form>
                 <div className="row">
                     <div className="input-field col s4">
-                        <label className="input-field" htmlFor="nome">Nome</label>
+                        <label className="input-field" htmlFor="nome">Nome Parceiro</label>
                         <input
                             className="validate"
                             id="nome"
@@ -141,6 +141,7 @@ class FormularioParceiro extends Component {
                             id="telefone"
                             type="text"
                             name="telefone"
+                            placeholder="(00) 0000-0000"
                             value={telefone}
                             onChange={this.escutadorDeInput} />
                     </div>
@@ -151,6 +152,7 @@ class FormularioParceiro extends Component {
                             id="email"
                             type="text"
                             name="email"
+                            placeholder="email@provedoremail.com.br"
                             value={email}
                             onChange={this.escutadorDeInput} />
                     </div>

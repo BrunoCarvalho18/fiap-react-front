@@ -21,6 +21,12 @@ class FormularioCadastro extends Component {
                 mensagem: 'Entre com o endereço'
             },
             {
+                campo: 'cpf',
+                metodo: 'isEmpty',
+                validoQuando: false,
+                mensagem: 'Entre com o cpf'
+            },
+            {
                 campo: 'cidade',
                 metodo: 'isEmpty',
                 validoQuando: false,
@@ -50,6 +56,7 @@ class FormularioCadastro extends Component {
         this.stateInicial = {
             nome: '',
             endereco: '',
+            cpf: '',
             cidade: '',
             cep: '',
             telefone: '',
@@ -78,8 +85,8 @@ class FormularioCadastro extends Component {
             this.props.escutadorDeSubmit(this.state);
             this.setState(this.stateInicial);
         } else {
-            const { nome, endereco, cidade, cep, telefone, email } = validacao;
-            const campos = [nome, endereco, cidade, cep, telefone, email];
+            const { nome, endereco, cpf,cidade, cep, telefone, email } = validacao;
+            const campos = [nome, endereco, cpf, cidade, cep, telefone, email];
 
             const camposInvalidos = campos.filter(elem => {
                 return elem.isInvalid;
@@ -91,7 +98,7 @@ class FormularioCadastro extends Component {
     }
 
     render() {
-        const { nome, endereco, cidade, cep, telefone, email } = this.state;
+        const { nome, endereco, cpf, cidade, cep, telefone, email } = this.state;
         
 
         return (
@@ -118,6 +125,16 @@ class FormularioCadastro extends Component {
                             onChange={this.escutadorDeInput} />
                     </div>
                     <div className="input-field col s4">
+                        <label className="input-field" htmlFor="cpf">CPF</label>
+                        <input
+                            className="validate"
+                            id="cpf"
+                            type="text"
+                            name="cpf"
+                            value={cpf}
+                            onChange={this.escutadorDeInput} />
+                    </div>
+                    <div className="input-field col s4">
                         <label className="input-field" htmlFor="cidade">Cidade</label>
                         <input
                             className="validate"
@@ -134,6 +151,7 @@ class FormularioCadastro extends Component {
                             id="cep"
                             type="text"
                             name="cep"
+                            placeholder="00000-000"
                             value={cep}
                             onChange={this.escutadorDeInput} />
                     </div>
@@ -144,6 +162,7 @@ class FormularioCadastro extends Component {
                             id="telefone"
                             type="text"
                             name="telefone"
+                            placeholder="(00) 0000-0000"
                             value={telefone}
                             onChange={this.escutadorDeInput} />
                     </div>
@@ -155,6 +174,7 @@ class FormularioCadastro extends Component {
                             type="text"
                             name="email"
                             value={email}
+                            placeholder="email@provedoremail.com.br"
                             onChange={this.escutadorDeInput} />
                     </div>
                 </div>

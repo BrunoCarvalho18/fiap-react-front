@@ -6,6 +6,13 @@ const ApiService ={
        .then(res => res.json());
     },
 
+    CriarCustomer: customer=>{
+    return fetch("http://localhost:8080/api/v1/clientes", {method: 'POST', headers: {'content-type': 'application/json'}, body: customer})
+       .then(res=> ApiService.TrataErros(res))
+       .then(res => res.json());
+    },
+
+
     TrataErros: res =>{
         if(!res.ok){
             throw Error(res.responseText);
